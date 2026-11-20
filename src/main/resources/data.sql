@@ -1,0 +1,20 @@
+INSERT INTO reviews (category, rating, reason, hashed_edit_token, created_at, updated_at)
+VALUES
+    ('FOOD', 5, '오늘 급식에 나온 카레가 맛있었어요.',
+     'eQo+KRjKh6EaA/99YikNeSbZukWWPZs6Z5ec5hBPqe4=', '2026-11-16 12:20:00', '2026-11-16 12:20:00'),
+    ('DORMITORY', 2, '저녁에 세탁기를 쓰려면 오래 기다려야 해요.',
+     'IuZi/pNtFDfiroLwiay5IdZNQX4Ataxl1Dv7Jm22VtY=', '2026-11-16 20:10:00', '2026-11-16 20:10:00'),
+    ('CLASS', 4, '실습 시간이 충분해서 수업 내용을 복습하기 좋았어요.',
+     'D47IseXzKnzWtX+qhSQWwohPuMbW9xJtjgoolPhcSDA=', '2026-11-17 10:40:00', '2026-11-17 10:40:00'),
+    ('FOOD', 3, '메뉴는 좋았는데 국이 조금 짰어요.',
+     'UWfX3+3QqSP6/KPvVTYMoq1kwWAdURxCFAi/YNgdpqQ=', '2026-11-17 12:35:00', '2026-11-17 12:35:00'),
+    ('FACILITY', 1, '체육관 앞 정수기가 고장 나서 물을 마시기 어려웠어요.',
+     'jAoOnc7CrMZQAemPlKDwacs4iZqa4xDaEJ/SmmjPYvA=', '2026-11-17 15:30:00', '2026-11-17 15:30:00'),
+    ('SCHOOL', 3, '학교 행사 일정을 조금 더 일찍 알려주면 좋겠어요.',
+     'J68LbDcW2Sz7A9OmU/AN7pcYRiZ4l/tlO2DUGcDhyf0=', '2026-11-18 09:05:00', '2026-11-18 09:05:00'),
+    ('TEACHING', 5, '어려운 개념을 예시로 설명해 주셔서 이해가 잘됐어요.',
+     'NDb4NoVj5zEdB4UqtjaP8c7Cun0KjGLHQ9fBObzwkFI=', '2026-11-18 11:00:00', '2026-11-18 11:00:00'),
+    ('FOOD', 4, '채소 반찬을 직접 고를 수 있어서 좋았어요.',
+     '2ZzQKimGijWUFAzZTGUC9eo+yLprnNYlAN9sO9jtWOQ=', '2026-11-18 12:15:00', '2026-11-18 12:15:00'),
+    ('DORMITORY', 4, '점호 이후에는 복도가 조용해서 잠들기 편해요.',
+     'B50DIO9xsyOIfRQEqIDxk5d9iqiPK41tGWi6Q2rIUTE=', '2026-11-18 21:45:00', '2026-11-18 21:45:00');
