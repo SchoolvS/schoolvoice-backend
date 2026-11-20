@@ -6,6 +6,8 @@ import com.schoolvoice.api.review.entity.Review;
 import com.schoolvoice.api.review.repository.ReviewRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class ReviewServiceImpl implements ReviewService {
 
@@ -17,7 +19,11 @@ public class ReviewServiceImpl implements ReviewService {
 
     @Override
     public ReviewResponse createReview(ReviewCreateRequest request) {
-        Review review = Review.create(request.category(), request.rating(), request.reason());
+        String rawToken = UUID.randomUUID().toString();
+
+        String hashedToken = ReviewCommandServiceImpl.hashToken(rawToken);
+
+        Review review = Review.create(request.category(), request.rating(), request.reason(), hashedToken);
         Review saved = reviewRepository.save(review);
 
         return new ReviewResponse(
