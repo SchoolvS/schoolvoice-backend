@@ -29,6 +29,9 @@ public class Review {
     @Column(nullable = false, length = 1000)
     private String reason;
 
+    @Column(nullable = false)
+    private String hashedEditToken;
+
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
@@ -38,16 +41,17 @@ public class Review {
     protected Review() {
     }
 
-    private Review(ReviewCategory category, int rating, String reason) {
+    private Review(ReviewCategory category, int rating, String reason, String hashedEditToken) {
         this.category = category;
         this.rating = rating;
         this.reason = reason;
+        this.hashedEditToken = hashedEditToken;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = this.createdAt;
     }
 
-    public static Review create(ReviewCategory category, int rating, String reason) {
-        return new Review(category, rating, reason);
+    public static Review create(ReviewCategory category, int rating, String reason, String hashedEditToken) {
+        return new Review(category, rating, reason, hashedEditToken);
     }
 
     public void update(int rating, String reason) {
@@ -70,6 +74,10 @@ public class Review {
 
     public String getReason() {
         return reason;
+    }
+
+    public String getHashedEditToken() {
+        return hashedEditToken;
     }
 
     public LocalDateTime getCreatedAt() {
