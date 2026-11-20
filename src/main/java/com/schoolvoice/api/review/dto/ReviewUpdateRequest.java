@@ -12,8 +12,6 @@ public record ReviewUpdateRequest(
         Integer rating,
 
         @NotBlank(message = "수정/평가 이유는 필수입니다.")
-        String reason,
-
-        String content
+        String reason
 ) {
 }
