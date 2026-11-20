@@ -1,3 +1,5 @@
 spring:
   application:
     name: schoolvoice
+  jpa:
+    defer-datasource-initialization: true
