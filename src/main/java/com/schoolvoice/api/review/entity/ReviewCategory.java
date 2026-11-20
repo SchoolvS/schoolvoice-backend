@@ -5,5 +5,6 @@ public enum ReviewCategory {
     DORMITORY,
     CLASS,
     FACILITY,
-    SCHOOL
+    SCHOOL,
+    TEACHING,
 }
